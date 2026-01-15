@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soporte Operativo - Red Banorte</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>Asistente Normativo</h2>
+            <span>Soporte Operativo Pyme - Cancún</span>
+        </div>
+        <div class="chat-messages" id="chatBox">
+            <div class="message bot-message">
+                <strong>SISTEMA EN LÍNEA</strong><br>
+                Bienvenido al soporte de procesos internos. Indique el procedimiento a consultar.
+            </div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="userInput" placeholder="Ej: Visita Externa..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()">BUSCAR</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
