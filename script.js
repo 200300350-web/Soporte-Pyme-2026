@@ -52,7 +52,6 @@ function getBotResponse(input) {
                 <strong>Acción:</strong> Si la rentabilidad cae < 10%, solicitar aval con bien raíz libre de gravamen.`;
     }
 
-    // 4. VISITA OCULAR EXTERNA (CON TABLA)
     // 4. VISITA OCULAR EXTERNA (TABLA 6x3)
     else if (input.includes('externa')) {
         return `<strong>MATRIZ DE RIESGO: VISITA EXTERNA</strong><br>
@@ -118,11 +117,45 @@ function getBotResponse(input) {
                 Solicitudes con riesgo que exijan tasa mayor deben ser declinadas.`;
     }
 
-    // SALUDO
-    else if (input.includes('hola') || input.includes('menu')) {
-        return "Sistema activo. Consultas disponibles: Alta Apolo, Rentabilidad, Visita Externa (Tabla), Tasa Máxima.";
+    /* --- SECCIÓN DE COMISIONES (NUEVA) --- */
+
+    // 7. APERTURA
+    else if (input.includes('apertura')) {
+        return `<strong>TABULADOR: COMISIÓN POR APERTURA</strong><br>
+                Costo único por disposición:<br>
+                <ul>
+                    <li><strong>Pre-aprobados:</strong> 1%</li>
+                    <li><strong>NAFIN:</strong> 0%</li>
+                    <li><strong>Bancomext:</strong> 2%</li>
+                    <li><strong>Tradicional:</strong> 2%</li>
+                </ul>`;
     }
 
+    // 8. PREPAGO
+    else if (input.includes('prepago') || input.includes('anticipado')) {
+        return `<strong>POLÍTICA DE PREPAGO</strong><br>
+                Penalización por liquidación anticipada:<br>
+                <ul>
+                    <li><strong>Tasa Variable:</strong> 0% (Sin costo).</li>
+                    <li><strong>Tasa Fija:</strong> Ver hoja de comisiones (Sujeto a cálculo de quebranto).</li>
+                </ul>`;
+    }
+
+    // 9. MENÚ COMISIONES (General)
+    else if (input.includes('comision') || input.includes('costo')) {
+        return `<strong>CONSULTA DE COMISIONES</strong><br>
+                Seleccione el tipo de comisión a consultar (Escriba la opción):<br>
+                <br>
+                1. <strong>Apertura</strong> (Ver porcentajes).<br>
+                2. <strong>Prepago</strong> (Ver condiciones).`;
+    }
+
+    // SALUDO
+    else if (input.includes('hola') || input.includes('menu')) {
+        return "Sistema activo. Consultas: Alta Apolo, Rentabilidad, Visita Externa, Tasa Máxima, Comisiones.";
+    }
+
+    // ERROR
     else {
         return "<strong>Consulta no válida.</strong><br>Verifique terminología en manual operativo.";
     }
