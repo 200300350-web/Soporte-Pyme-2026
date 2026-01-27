@@ -117,7 +117,7 @@ function getBotResponse(input) {
                 Solicitudes con riesgo que exijan tasa mayor deben ser declinadas.`;
     }
 
-    /* --- SECCIÓN DE COMISIONES (NUEVA) --- */
+    /* --- SECCIÓN DE COMISIONES --- */
 
     // 7. APERTURA
     else if (input.includes('apertura')) {
@@ -137,17 +137,18 @@ function getBotResponse(input) {
                 Penalización por liquidación anticipada:<br>
                 <ul>
                     <li><strong>Tasa Variable:</strong> 0% (Sin costo).</li>
-                    <li><strong>Tasa Fija:</strong> Ver hoja de comisiones .</li>
+                    <li><strong>Tasa Fija:</strong> Ver hoja de comisiones.</li>
                 </ul>`;
     }
 
-    // 9. MENÚ COMISIONES (General)
+    // 9. MENÚ COMISIONES (SIN NÚMEROS NI PUNTOS)
+    // Aquí cambié todo para usar solo <br> (saltos de línea)
     else if (input.includes('comision') || input.includes('costo')) {
         return `<strong>CONSULTA DE COMISIONES</strong><br>
-                Seleccione el tipo de comisión a consultar (Escriba la opción):<br>
+                Seleccione el tipo de comisión a consultar:<br>
                 <br>
-                 <strong>Apertura</strong> <br>
-                 <strong>Prepago</strong> `;
+                <strong>Apertura</strong> (Ver porcentajes)<br>
+                <strong>Prepago</strong> (Ver condiciones)`;
     }
 
     // SALUDO
