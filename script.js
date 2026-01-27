@@ -146,8 +146,8 @@ function getBotResponse(input) {
         return `<strong>CONSULTA DE COMISIONES</strong><br>
                 Seleccione el tipo de comisión a consultar (Escriba la opción):<br>
                 <br>
-                 <strong>Apertura</strong> .<br>
-                 <strong>Prepago</strong> .`;
+                 <strong>Apertura</strong> <br>
+                 <strong>Prepago</strong> `;
     }
 
     // SALUDO
