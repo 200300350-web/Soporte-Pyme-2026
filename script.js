@@ -137,7 +137,7 @@ function getBotResponse(input) {
                 Penalización por liquidación anticipada:<br>
                 <ul>
                     <li><strong>Tasa Variable:</strong> 0% (Sin costo).</li>
-                    <li><strong>Tasa Fija:</strong> Ver hoja de comisiones (Sujeto a cálculo de quebranto).</li>
+                    <li><strong>Tasa Fija:</strong> Ver hoja de comisiones .</li>
                 </ul>`;
     }
 
@@ -146,8 +146,8 @@ function getBotResponse(input) {
         return `<strong>CONSULTA DE COMISIONES</strong><br>
                 Seleccione el tipo de comisión a consultar (Escriba la opción):<br>
                 <br>
-                1. <strong>Apertura</strong> (Ver porcentajes).<br>
-                2. <strong>Prepago</strong> (Ver condiciones).`;
+                 <strong>Apertura</strong> .<br>
+                 <strong>Prepago</strong> .`;
     }
 
     // SALUDO
